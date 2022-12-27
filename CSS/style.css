@@ -15,15 +15,7 @@ body {
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 1;
-}
-
-#contenedor {
-    width: auto;
-    position: relative;
-    z-index: 10;
-    margin-left: 25%;
-    margin-right: 25%;
+    z-index: -1;
 }
 
 #nav {
@@ -32,6 +24,7 @@ body {
     z-index: 15;
     width: 100%;
     text-align: center;
+    top: 0px;
 }
 
 #menu-icon {
@@ -60,10 +53,17 @@ body {
     border-bottom: 1px solid #ffffff;
 }
 
+#contenedor {
+    z-index: 5;
+    text-align: center;
+    justify-content: center;
+    margin: auto 25%;
+}
+
 .header-content {
     width: auto;
-    padding-top: 50px;
     text-align: center;
+    padding-top: 40px;
 }
 
 .tittle-CV {
@@ -123,14 +123,13 @@ article {
 }
 
 #contacto ul li a:hover {
-    color: gray;
+    color: rgba(128, 128, 128, 0.581);
 }
 
 @media screen and (max-width: 500px) {
 
-    #contenedor {
-        padding-top: 45vh;
-        margin: 30% 25% 0% 25%;
+    #nav-letters {
+        display: none;
     }
 
     .grid-4, .grid-2 {
@@ -140,19 +139,14 @@ article {
     #contacto {
         font-size: 60%;
     }
-
+    
     #menu-icon {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         font-size: 30px;
-        margin-bottom: 10%;
-        
+        margin: 10px;
     }
     
-    nav {
-        padding: 10px;
-    }
-
     nav > ul > li {
         display: flex;
         flex-direction: column;
@@ -160,13 +154,34 @@ article {
         justify-content: flex-start;
         margin: 3% 0;
     }
+    
+    .header-content {
+        padding-top: 40px;
+    }
 }
 
-@media(max-width: 1250px) {
+@media screen and (max-width: 792px) and (min-width: 501px) {
 
+    .grid-4, .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .header-content {
+        padding-top: 80px;
+    }
+    
+    #nav-letters {
+        display: block;
+    }
+
+    #menu-icon {
+        display: none;
+    }
     #contenedor {
         margin: auto;
     }
+}
+@media screen and (max-width: 1250px) and (min-width: 793px){
 
     .grid-4, .grid-2 {
         grid-template-columns: 1fr 1fr;
@@ -174,5 +189,13 @@ article {
     
     #contacto {
         font-size: 60%;
+    }
+
+    #nav-letters {
+        display: block;
+    }
+
+    #menu-icon {
+        display: none;
     }
 }

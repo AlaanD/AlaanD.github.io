@@ -8,6 +8,8 @@
     <meta name="author" content="Alán Dri" />
     <meta name="ketwords" content="CV digital" />
     <title>CV Alan Dri</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/grid.css" />
 
     <!--Font Awesome-->
     <link
@@ -25,29 +27,35 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap"
       rel="stylesheet"
     />
-
-    <!--CSS-->
-    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-
     <header>
       <nav id="nav">
         <ul id="nav-letters">
           <li>
-            <a href="index.html">Inicio</a>
+            <a class="letters" href="index.html">Inicio</a>
           </li>
           <li>
-            <a href="#conocimientos">Conociminetos</a>
+            <a class="letters" href="#conocimientos">Conocimientos</a>
           </li>
           <li>
-            <a href="#estudios">Estudios</a>
+            <a class="letters" href="#estudios">Estudios</a>
           </li>
           <li>
-            <a href="#contacto">Contacto</a>
+            <a class="letters" href="#portafolio">Portafolio</a>
+          </li>
+          <li>
+            <a class="letters" href="#contacto">Contacto</a>
+          </li>
+          <li>
+            <!--Button light/dark mode-->
+            <button class="switch" id="switch">
+              <span><i class="fa-solid fa-sun"></i></span>
+              <span><i class="fa-solid fa-moon"></i></span>
+            </button>
           </li>
         </ul>
-  
+        
         <!--Icono nav para cel-->
         <a href="#" id="menu-icon">
           <i class="fa-solid fa-bars"></i>
@@ -55,127 +63,120 @@
       </nav>
     </header>
 
-    <div id="contenedor">
-      <article class="header-content">
-        <img src="img/Alan Dri.jpg" width="250px" alt="Foto CV" />
-        <h3 class="tittle-CV">Alán David Dri</h3>
+    <article id="contenedor" class="contenedor">
+      <section class="header-content">
+        <img src="img/Alan Dri.jpg" alt="Foto CV" />
+        <h1 class="tittle-CV">Alán David Dri</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, itaque
           Aliquid facere quod exercitationem quo ea quis at tempora? Neque
           inventore autem velit quod est numquam dolores. Accusantium, saepe
           dolore.
         </p>
-      </article>
+      </section>
 
-      <article>
-        <!--Conocimientos-->
-        <section id="conociminetos">
-          <h3 class="tittle">Conociminetos</h3>
-          <div class="container grid-4">
-            <div>
-              <i class="fa-brands fa-html5 fa-5x"></i>
-              <h1 class="text">HTML</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Reprehenderit fugit quas, quisquam corporis vitae dicta!
-              </p>
-            </div>
-            <div>
-              <i class="fa-brands fa-css3-alt fa-5x"></i>
-              <h1 class="text">CSS</h1>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Ducimus vitae, ipsam voluptatem nisi incidunt corporis!
-              </p>
-            </div>
-            <div>
-              <i class="fa-brands fa-js fa-5x"></i>
-              <h1 class="text">JavaScript</h1>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
-                reprehenderit architecto cumque, neque vero unde.
-              </p>
-            </div>
-            <div>
-              <i class="fa-brands fa-java fa-5x"></i>
-              <h1 class="text">Java</h1>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptatum iste sequi molestiae maxime dolore voluptates.
-              </p>
-            </div>
+      <section id="conocimientos">
+        <h2 class="tittle">Conocimientos</h2>
+        <div class="grid-4">
+          <div>
+            <i class="fa-brands fa-html5 fa-5x"></i>
+            <h3 class="text">HTML</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Reprehenderit fugit quas, quisquam corporis vitae dicta!
+            </p>
           </div>
-        </section>
+          <div>
+            <i class="fa-brands fa-css3-alt fa-5x"></i>
+            <h3 class="text">CSS</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
+              vitae, ipsam voluptatem nisi incidunt corporis!
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-js fa-5x"></i>
+            <h3 class="text">JavaScript</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+              reprehenderit architecto cumque, neque vero unde.
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-java fa-5x"></i>
+            <h3 class="text">Java</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptatum iste sequi molestiae maxime dolore voluptates.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!--Estudios-->
-        <section id="estudios">
-          <div class="container-text-center">
-            <div class="grid-2">
-              <div>
+      <section id="estudios">
+          <div class="grid-2">
+            <div>
+              <a id="div-a" href="https://www.fcad.uner.edu.ar/" target="_blank">
                 <i class="fa-solid fa-graduation-cap fa-5x"></i>
-              </div>
-              <aside>
-                <h3 class="tittle">Estudios</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Voluptatum, assumenda vero. Possimus quidem harum iure rem
-                  aliquid repudiandae tempora accusamus repellendus voluptate?
-                  Quasi minus dolor, quo voluptatem eos vel suscipit?
-                </p>
-              </aside>
+              </a>
             </div>
+            <aside id="aside">
+              <h2 class="tittle">Estudios</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptatum, assumenda vero. Possimus quidem harum iure rem
+                aliquid repudiandae tempora accusamus repellendus voluptate?
+                Quasi minus dolor, quo voluptatem eos vel suscipit?
+              </p>
+            </aside>
           </div>
-        </section>
+      </section>
 
-        <!--Portafolio-->
-        <section id="portafolio">
-          <div class="container-text-center">
-            <div class="grid-2">
-              <div>
-                <h3 class="tittle">Portafolio</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Voluptatum, assumenda vero. Possimus quidem harum iure rem
-                  aliquid repudiandae tempora accusamus repellendus voluptate?
-                  Quasi minus dolor, quo voluptatem eos vel suscipit?
-                </p>
-              </div>
-              <aside>
-                <i class="fa-solid fa-briefcase fa-5x"></i>
-              </aside>
+      <section id="portafolio">
+          <div class="grid-2">
+            <div>
+              <h2 class="tittle">Portafolio</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptatum, assumenda vero. Possimus quidem harum iure rem
+                aliquid repudiandae tempora accusamus repellendus voluptate?
+                Quasi minus dolor, quo voluptatem eos vel suscipit?
+              </p>
             </div>
+            <aside>
+              <a id="aside-a" href="https://github.com/AlaanD?tab=repositories" target="_blank">
+                <i class="fa-solid fa-briefcase fa-5x"></i>  
+              </a>
+            </aside>
           </div>
-        </section>
-      </article>
+      </section>
+    </article>
 
-      <!--Pie de pagina-->
-      <footer id="contacto">
-        <ul>
-          <li>
-            <a href="mailto:alandri33@gmail.com" target="_blank">
-              <i class="fa-solid fa-envelope fa-4x"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://facebook.com/alanz33" target="_blank">
-              <i class="fa-brands fa-facebook fa-4x"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/alan.drii" target="_blank">
-              <i class="fa-brands fa-instagram fa-4x"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://t.me/+kImBRNIXDVs0NDcx" target="_blank">
-              <i class="fa-brands fa-telegram fa-4x"></i>
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+    <footer id="contacto">
+      <ul>
+        <li>
+          <a class="letters-contacto" href="mailto:alandri33@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope fa-4x"></i>
+          </a>
+        </li>
+        <li>
+          <a class="letters-contacto" href="https://facebook.com/alanz33" target="_blank">
+            <i class="fa-brands fa-facebook fa-4x"></i>
+          </a>
+        </li>
+        <li>
+          <a class="letters-contacto" href="https://instagram.com/alan.drii" target="_blank">
+            <i class="fa-brands fa-instagram fa-4x"></i>
+          </a>
+        </li>
+        <li>
+          <a class="letters-contacto" href="https://t.me/+kImBRNIXDVs0NDcx" target="_blank">
+            <i class="fa-brands fa-telegram fa-4x"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
 
-    <!--JS nav cel-->
-    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

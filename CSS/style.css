@@ -178,6 +178,12 @@ body.dark #menu-icon {
 }
 
 .letters:hover {
+    background: #53b895;
+    box-shadow: 0 0 10px #53b895, 0 0 40px #53b895, 0 0 80px #53b895;
+    transition-delay: 1s;
+}
+
+body.dark .letters:hover {
     background: #32eba9;
     box-shadow: 0 0 10px #32eba9, 0 0 40px #32eba9, 0 0 80px #32eba9;
     transition-delay: 1s;
@@ -193,6 +199,14 @@ body.dark #menu-icon {
     left: -100%;
     width: 100%;
     height: 2px;
+    background: linear-gradient(90deg, transparent, #53b895);
+}
+
+body.dark .span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
     background: linear-gradient(90deg, transparent, #32eba9);
 }
 
@@ -201,7 +215,15 @@ body.dark #menu-icon {
     transition: 1s;
 }
 
-.span3{
+.span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #53b895);
+}
+
+body.dark .span3 {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -209,19 +231,28 @@ body.dark #menu-icon {
     background: linear-gradient(270deg, transparent, #32eba9);
  }
 
+
  .letters:hover .span3 {
     right: 100%;
     transition: 1s;
     transition-delay: 0.5s;
 }
 
-.span2{
+.span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #53b895);
+}
+
+body.dark .span2 {
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg, transparent, #32eba9);
- }
+}
 
  .letters:hover .span2 {
     top: 100%;
@@ -229,13 +260,21 @@ body.dark #menu-icon {
     transition-delay: 0.25s;
 }
 
-.span4{
+.span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #53b895);
+}
+
+body.dark .span4 {
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(360deg, transparent, #32eba9);
- }
+}
 
  .letters:hover .span4 {
     bottom: 100%;

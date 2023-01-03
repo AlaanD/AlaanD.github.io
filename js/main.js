@@ -31,16 +31,4 @@ function mostrarNav() {
 function cambiarAModoDark() {
     document.body.classList.toggle('dark');
     btn.classList.toggle('active');
-    document.getElementById('nav').classList.toggle('dark');
-    document.getElementById('aside-a').classList.toggle('dark');
-    document.getElementById('div-a').classList.toggle('dark');
-    document.getElementById('menu-icon').classList.toggle('dark');
-    recorrerArray(document.getElementsByClassName('letters'));
-    recorrerArray(document.getElementsByClassName('letters-contacto'));
-}
-
-function recorrerArray(array){
-    for(let i = 0; i < array.length; i++){
-        array[i].classList.toggle('dark');
-    }
 }

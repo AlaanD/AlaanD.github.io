@@ -2,15 +2,128 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
     color: #000000;
     font-family: 'Roboto Mono', monospace;
+    transition: .3s ease all;
+    background: linear-gradient(to right,#8dc6ed,#979de0);
+}
+
+.burbuja {
+    border-radius: 50%;
+    background:#fff;
+    opacity: .3;
+    position: absolute;
+    bottom: -100;
+    z-index: -1;
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+ }
+
+ .burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+ }
+
+ .burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+ }
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
 }
 
 body.dark {
-    background: #000000;
+    background: linear-gradient(to right,#01131f,#0a126c);
     color: #ffffff;
 }
 
@@ -23,14 +136,14 @@ body.dark {
 }
 
 #nav {
-    background: #ffffff;
+    background: linear-gradient(to right,#8dc6ed,#979de0);
     position: fixed;
     width: 100%;
     text-align: center;
 }
 
-#nav.dark {
-    background: #000000;
+body.dark #nav {
+    background: linear-gradient(to right,#01131f,#0a126c);
 }
 
 #menu-icon {
@@ -40,16 +153,13 @@ body.dark {
     color: #000000;
 }
 
-#menu-icon.dark {
+body.dark #menu-icon {
     color: #ffffff;
 }
 
 #nav ul li {
     list-style: none;
-    display: inline-block;;
-    margin-left: 15px;
-    margin-right: 15px;
-
+    display: inline-block;
 }
 
 #nav ul li a {
@@ -59,17 +169,82 @@ body.dark {
     color: #000000;
 }
 
-#nav ul li a.dark {
+.letters {
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.letters:hover {
+    background: #32eba9;
+    box-shadow: 0 0 10px #32eba9, 0 0 40px #32eba9, 0 0 80px #32eba9;
+    transition-delay: 1s;
+}
+
+.letters span {
+    position: absolute;
+    display: block;
+}
+
+.span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #32eba9);
+}
+
+.letters:hover .span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+.span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #32eba9);
+ }
+
+ .letters:hover .span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #32eba9);
+ }
+
+ .letters:hover .span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #32eba9);
+ }
+
+ .letters:hover .span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+body.dark #nav ul li a {
     color: #ffffff;
-}
-
-#nav ul li a:hover {
-    color: #32eba9;
-    border-bottom: 1px solid #000000;
-}
-
-#nav ul li a.dark:hover {
-    border-bottom: 1px solid #ffffff;
 }
 
 .switch {
@@ -80,6 +255,8 @@ body.dark {
     cursor: pointer;
     display: flex;
     outline: none;
+    margin-left: 10px;
+    top: -20px;
 }
 
 .switch span {
@@ -119,7 +296,7 @@ body.dark {
 .header-content {
     width: auto;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 
 .header-content img {
@@ -169,7 +346,7 @@ div a {
     color: #000000;
 }
 
-div a.dark {
+body.dark div a {
     color: #ffffff;    
 }
 
@@ -177,15 +354,23 @@ div a:hover {
     color: rgba(128, 128, 128, 0.581);
 }
 
+body.dark div a:hover {
+    color: rgba(128, 128, 128, 0.581);
+}
+
 aside a {
     color: #000000;
 }
 
-aside a.dark {
+body.dark aside a {
     color: #ffffff;
 }
 
 aside a:hover {
+    color: rgba(128, 128, 128, 0.581);
+}
+
+body.dark aside a:hover {
     color: rgba(128, 128, 128, 0.581);
 }
 
@@ -204,8 +389,7 @@ aside a:hover {
     color: #000000;
 }
 
-#contacto ul li a.dark {
-    
+body.dark #contacto ul li a {
     color: #ffffff;
 }
 
@@ -213,7 +397,11 @@ aside a:hover {
     color: rgba(128, 128, 128, 0.581);
 }
 
-@media screen and (max-width: 500px) {
+body.dark #contacto ul li a:hover {
+    color: rgba(128, 128, 128, 0.581);
+}
+
+@media screen and (max-width: 499px) {
 
     #nav-letters {
         display: none;
@@ -251,7 +439,7 @@ aside a:hover {
     }
 }
 
-@media screen and (max-width: 792px) and (min-width: 501px) {
+@media screen and (max-width: 786px) and (min-width: 500px) {
 
     .grid-4, .grid-2 {
         grid-template-columns: 1fr 1fr;
@@ -271,9 +459,23 @@ aside a:hover {
     #contenedor {
         margin: auto;
     }
+
+    .header-content {
+        padding-top: 120px;
+    }
 }
 
-@media screen and (max-width: 1250px) and (min-width: 793px){
+@media screen and (max-width: 865px) and (min-width: 787px){
+    .switch {
+        top: 0px;
+    }
+
+    .header-content {
+        padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 866px){
 
     .grid-4, .grid-2 {
         grid-template-columns: 1fr 1fr;
